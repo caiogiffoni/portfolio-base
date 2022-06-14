@@ -30,6 +30,7 @@ export const HeaderMenu = () => {
           color: "white",
         }}
         _expanded={{ bg: "#3a3838" }}
+        h="30px"
       >
         Menu
       </MenuButton>
@@ -40,21 +41,21 @@ export const HeaderMenu = () => {
             color: "white",
           }}
         >
-          <Link href="#quemsomos" w="100%" _focus={{ color: "#41DA78" }}>
+          <Link href="#" w="100%" _focus={{ color: "#41DA78" }}>
             Home
           </Link>
         </MenuItem>
         <MenuItem _focus={{ background: "#262626" }}>
-          <HeaderLink to="#quemsomos">Sobre</HeaderLink>
+          <HeaderLink to="#aboutme">Sobre</HeaderLink>
         </MenuItem>
         <MenuItem _focus={{ background: "#262626" }}>
-          <HeaderLink to="#quemsomos">Skills</HeaderLink>
+          <HeaderLink to="#skills">Competências</HeaderLink>
         </MenuItem>
         <MenuItem _focus={{ background: "#262626" }}>
-          <HeaderLink to="#quemsomos">Qualification</HeaderLink>
+          <HeaderLink to="#project">Projetos</HeaderLink>
         </MenuItem>
         <MenuItem _focus={{ background: "#262626" }}>
-          <HeaderLink to="#quemsomos">Contato</HeaderLink>
+          <HeaderLink to="#contact">Contato</HeaderLink>
         </MenuItem>
       </MenuList>
     </Menu>

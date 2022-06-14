@@ -1,6 +1,18 @@
-import { Box, Flex, Heading, HStack, Text, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Heading,
+  HStack,
+  Icon,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
 import Lottie from "react-lottie";
 import computerBoy from "../../assets/lootie-boy-computer.json";
+
+import { AiFillLinkedin } from "react-icons/ai";
+import { AiFillGithub } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 export const Introduction = () => {
   const defaultOptions = {
@@ -33,6 +45,20 @@ export const Introduction = () => {
           <Text color="white" fontSize={["12px", "14px", "16px"]}>
             Desenvolvedor Fullstack
           </Text>
+          <HStack spacing={5}>
+            <Link
+              to={{ pathname: "https://www.linkedin.com/in/caiocgfg" }}
+              target="_blank"
+            >
+              <Icon boxSize="30px" as={AiFillLinkedin} />
+            </Link>
+            <Link
+              to={{ pathname: "https://github.com/caiogiffoni" }}
+              target="_blank"
+            >
+              <Icon boxSize="30px" as={AiFillGithub} />
+            </Link>
+          </HStack>
         </VStack>
         <Box w={["250px", "300px", "400px"]}>
           <Lottie options={defaultOptions} />

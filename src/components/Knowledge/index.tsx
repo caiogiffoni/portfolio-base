@@ -14,8 +14,9 @@ export const Knowledge = () => {
   const widthCard = "130px";
   return (
     <Box
+      id="skills"
       w="100%"
-      p={["10px 20px", "10px 20px", "50px 120px"]}
+      p={["10px 20px", "10px 20px", "60px 120px"]}
       bgColor="#212121"
       color="#41DA78"
     >
@@ -23,7 +24,14 @@ export const Knowledge = () => {
         <Heading color="white">Competências</Heading>
       </HStack>
       <Flex w="100%" justify="center" align="center">
-        <Flex w="85%" wrap="wrap" gap="18px" justify="center" mt="25px">
+        <Flex
+          w="85%"
+          wrap="wrap"
+          gap="18px"
+          justify="center"
+          mt="25px"
+          mb="15px"
+        >
           <Image
             w={widthCard}
             src={
@@ -77,7 +85,6 @@ export const Knowledge = () => {
           />
 
           <Image
-            mb="15px"
             w={widthCard}
             src={
               "https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white&style=plastic"

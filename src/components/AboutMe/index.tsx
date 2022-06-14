@@ -15,13 +15,14 @@ import Caio from "../../assets/Caio_Giffoni__Corte_-removebg-about-me.png";
 export const AboutMe = () => {
   return (
     <Box
+      id="aboutme"
       w="100%"
-      p={["10px 20px", "10px 20px", "50px 120px"]}
+      p={["10px 20px", "10px 20px", "60px 120px"]}
       bgColor="#262626"
       color="#41DA78"
     >
       <Flex justify="center" align="center" mt="20px">
-        <Heading color="white">Sobre Mim</Heading>
+        <Heading color="white">Sobre</Heading>
       </Flex>
       <Flex
         justify="center"
