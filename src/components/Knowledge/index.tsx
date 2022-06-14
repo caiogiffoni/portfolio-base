@@ -23,7 +23,7 @@ export const Knowledge = () => {
       color="#41DA78"
     >
       <HStack justify="center" mt="15px">
-        <Heading color="white">Competências</Heading>
+        <Heading color="white">Conhecimento</Heading>
       </HStack>
       <Flex w="100%" justify="center" align="center">
         <Flex

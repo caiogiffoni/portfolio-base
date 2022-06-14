@@ -31,7 +31,7 @@ export const Header = () => {
       <HStack spacing={[2, 2, 2, 6]} display={["none", "none", "flex"]}>
         <HeaderLink to="#">Home</HeaderLink>
         <HeaderLink to="#aboutme">Sobre</HeaderLink>
-        <HeaderLink to="#skills">Competência</HeaderLink>
+        <HeaderLink to="#skills">Conhecimento</HeaderLink>
         <HeaderLink to="#project">Projetos</HeaderLink>
         <HeaderLink to="#contact">Contato</HeaderLink>
       </HStack>

@@ -35,21 +35,14 @@ export const HeaderMenu = () => {
         Menu
       </MenuButton>
       <MenuList bgColor="black" color="white" borderColor="#41DA78">
-        <MenuItem
-          _focus={{
-            background: "#262626",
-            color: "white",
-          }}
-        >
-          <Link href="#" w="100%" _focus={{ color: "#41DA78" }}>
-            Home
-          </Link>
+        <MenuItem _focus={{ background: "#262626" }}>
+          <HeaderLink to="#">Home</HeaderLink>
         </MenuItem>
         <MenuItem _focus={{ background: "#262626" }}>
           <HeaderLink to="#aboutme">Sobre</HeaderLink>
         </MenuItem>
         <MenuItem _focus={{ background: "#262626" }}>
-          <HeaderLink to="#skills">Competências</HeaderLink>
+          <HeaderLink to="#skills">Conhecimento</HeaderLink>
         </MenuItem>
         <MenuItem _focus={{ background: "#262626" }}>
           <HeaderLink to="#project">Projetos</HeaderLink>
