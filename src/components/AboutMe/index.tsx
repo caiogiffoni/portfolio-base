@@ -17,7 +17,7 @@ export const AboutMe = () => {
     <Box
       id="aboutme"
       w="100%"
-      p={["10px 20px", "10px 20px", "60px 120px"]}
+      p={["40px 20px", "50px 20px", "60px 120px"]}
       bgColor="#262626"
       color="#41DA78"
     >
@@ -35,7 +35,7 @@ export const AboutMe = () => {
         <Box bgColor="#60d88c" borderRadius="25px" w={["200px", "280px"]}>
           <Image src={Caio} />
         </Box>
-        <Box maxW={["200px", "50%"]}>
+        <Box p={["0px", "30px", "50px"]} w={["80%", "80%", "50%"]}>
           <Text color="white" fontSize={["15px", "18px"]}>
             Desenvolvedor FrontEnd, estudando backend, formado em engenharia
             civil com MBA em gerenciamento de projetos. Após alguns anos na

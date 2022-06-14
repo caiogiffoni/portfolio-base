@@ -10,8 +10,7 @@ import {
 import Lottie from "react-lottie";
 import computerBoy from "../../assets/lootie-boy-computer.json";
 
-import { AiFillLinkedin } from "react-icons/ai";
-import { AiFillGithub } from "react-icons/ai";
+import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
 export const Introduction = () => {
@@ -31,9 +30,10 @@ export const Introduction = () => {
         justify="space-around"
         direction={["column", "column", "row"]}
         align="center"
+        w="100%"
       >
         <VStack
-          p={["20px", "30px", "50px"]}
+          p={["0px", "30px", "50px"]}
           w={["80%", "80%", "50%"]}
           mt={["30px", "40px", "50px"]}
           align={["flex-start"]}

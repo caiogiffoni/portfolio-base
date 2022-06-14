@@ -41,27 +41,29 @@ export const Projects = () => {
         </Text>
         <Image
           src={CodeReview}
-          w={["200px", "300px"]}
+          w={["220px", "300px"]}
           order={["1", "1", "2"]}
         />
       </Flex>
-      <VStack mt="40px" spacing={5}>
-        <ProjectCard
-          print={HDR}
-          title="Hora do Rango"
-          description="Aplicação para conectar clientes e cozinheiros. Foi um projeto feito
+      <HStack justify="center" mt="40px" w="100%">
+        <VStack spacing={5} w={["90%"]}>
+          <ProjectCard
+            print={HDR}
+            title="Hora do Rango"
+            description="Aplicação para conectar clientes e cozinheiros. Foi um projeto feito
             em grupo desde de a concepção até o término do MVP. Feita em Chakra UI."
-          vercel="https://capstone-m3-grupo-5.vercel.app/"
-          github="https://github.com/devadrianoabner/capstone-m3---grupo-5/"
-        />
-        <ProjectCard
-          print={doIt}
-          title="do.it"
-          description="Aplicação de lista de tarefas feita em react com styled components"
-          vercel="https://do-it-caiogiffoni-app.vercel.app/"
-          github="https://github.com/caiogiffoni/do-it-caiogiffoni-app"
-        />
-      </VStack>
+            vercel="https://capstone-m3-grupo-5.vercel.app/"
+            github="https://github.com/devadrianoabner/capstone-m3---grupo-5/"
+          />
+          <ProjectCard
+            print={doIt}
+            title="do.it"
+            description="Aplicação de lista de tarefas feita em react com styled components."
+            vercel="https://do-it-caiogiffoni-app.vercel.app/"
+            github="https://github.com/caiogiffoni/do-it-caiogiffoni-app"
+          />
+        </VStack>
+      </HStack>
     </Box>
   );
 };

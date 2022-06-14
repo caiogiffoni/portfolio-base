@@ -34,20 +34,21 @@ export const ProjectCard = ({
       p={["20px 20px", "20px 30px", "20px 60px"]}
       borderRadius="20px"
       bgColor="#212121"
-      maxW="960px"
+      w="100%"
+      maxW="1120px"
     >
       <Flex
         gap={8}
-        justify="center"
+        justify="flex-start"
         align={["flex-start", "flex-start", "center"]}
         direction={["column", "column", "column", "row"]}
       >
         <Image
           src={print}
           alt="HDR"
-          h={["150px", "150px", "150px", "180px", "200px"]}
+          w={["310px", "310px", "310px", "310px", "410px"]}
         />
-        <VStack align="flex-start" maxW="600px" overflow="auto">
+        <VStack align="flex-start" maxW="600px">
           <Heading fontSize={["25px", "30px"]}>{title}</Heading>
           <Text flexGrow="2" fontSize={["16px", "16px"]}>
             {description}

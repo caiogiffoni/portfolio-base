@@ -8,7 +8,7 @@ export const Header = () => {
   return (
     <HStack
       bgColor="#212121"
-      h={["70px", "80px"]}
+      h={["65px", "80px"]}
       w="100%"
       p={["0px 30px", "0px 80px"]}
       justify="space-between"
@@ -21,9 +21,8 @@ export const Header = () => {
       <HStack>
         <Image
           src={caioLogo}
-          w="80px"
+          w={["30px", "40px", "80px"]}
           borderRadius="32px"
-          display={["none", "none", "block"]}
         />
         <Heading fontSize={["18px", "24px"]} color="#41DA78">
           Caio Giffoni
