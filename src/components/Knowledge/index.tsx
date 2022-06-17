@@ -86,6 +86,7 @@ export const Knowledge = () => {
                 animate={control}
                 ref={ref}
                 variants={boxVariant}
+                key={i}
               >
                 <Image w={[SmallScreen, BigScreen]} h="40px" src={item} />
               </Box>

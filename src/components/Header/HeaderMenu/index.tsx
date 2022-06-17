@@ -60,11 +60,12 @@ export const HeaderMenu = () => {
         <HamburgerIcon boxSize="20px" />
       </MenuButton>
       <MenuList bgColor="black" color="white" borderColor="#41DA78">
-        {menu.map((item) => (
+        {menu.map((item, i) => (
           <Box
             as={motion.div}
             animate={{ y: [50, 25, 0], opacity: [0, 0.5, 1] }}
             transition="1s linear"
+            key={i}
           >
             <MenuItem _hover={{ background: "none" }}>
               <HeaderLink to={item.to}>{item.description}</HeaderLink>

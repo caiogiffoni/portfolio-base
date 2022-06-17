@@ -7,6 +7,7 @@ import {
   Icon,
   Input,
   Text,
+  useToast,
   VStack,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
@@ -32,6 +33,8 @@ interface SendData {
 }
 
 export const Contact = () => {
+  const toast = useToast();
+
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -47,7 +50,16 @@ export const Contact = () => {
 
     emailjs
       .send(serviceId, templateId, { ...data }, userId)
-      .then((response) => console.log(response))
+      .then((_) => {
+        toast({
+          title: "Mensagem enviada",
+          description: "Em breve entraremos em contato",
+          status: "success",
+          duration: 9000,
+          isClosable: true,
+        });
+        reset();
+      })
       .then((error) => console.log(error));
   };
 
@@ -60,6 +72,7 @@ export const Contact = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<SendData>({ resolver: yupResolver(signInSchema) });
   return (

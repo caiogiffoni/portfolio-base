@@ -14,6 +14,10 @@ import { Link } from "react-router-dom";
 
 import { AiFillGithub } from "react-icons/ai";
 
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
+
 interface ProjectCardsProps {
   title: string;
   description: string;
@@ -29,8 +33,28 @@ export const ProjectCard = ({
   vercel,
   print,
 }: ProjectCardsProps) => {
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    } else {
+      control.start("hidden");
+    }
+  }, [control, inView]);
+
+  const boxVariant = {
+    visible: { opacity: 1, scale: 1, transition: { duration: 1 } },
+    hidden: { opacity: 0, scale: 0 },
+  };
+
   return (
     <Box
+      as={motion.div}
+      ref={ref}
+      variants={boxVariant}
+      animate={control}
       color="white"
       p={["20px 20px", "20px 30px", "20px 60px"]}
       borderRadius="20px"
