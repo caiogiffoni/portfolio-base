@@ -7,11 +7,11 @@ interface HeaderLinkProps {
   children: string;
 }
 
-export const HeaderLink = ({ children, to }: HeaderLinkProps) => {
+export const HeaderLinkDesktop = ({ children, to }: HeaderLinkProps) => {
   return (
     <Box
       as={motion.div}
-      whileHover={{ scale: 1.05 }}
+      whileHover={{ scale: 1.3 }}
       whileTap={{ scale: 0.9 }}
       w="100%"
     >

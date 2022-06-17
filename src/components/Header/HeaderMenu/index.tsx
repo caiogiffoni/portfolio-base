@@ -1,4 +1,4 @@
-import { ChevronDownIcon } from "@chakra-ui/icons";
+import { HamburgerIcon } from "@chakra-ui/icons";
 import {
   Menu,
   MenuButton,
@@ -13,13 +13,39 @@ import {
   Link,
 } from "@chakra-ui/react";
 import { HeaderLink } from "../HeaderLink";
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { setFlagsFromString } from "v8";
 
 export const HeaderMenu = () => {
+  let i = 0;
+
+  const sourceMenu = [
+    { description: "Home", to: "#" },
+    { description: "Sobre", to: "#aboutme" },
+    { description: "Projetos", to: "#projects" },
+    { description: "Tecnologias", to: "#skills" },
+    { description: "Contato", to: "#contact" },
+  ];
+
+  const [menu, setMenu] = useState([{ description: "Home", to: "#" }]);
+
+  const handleClick = () => {
+    if (sourceMenu.length === menu.length) return false;
+    const interval = setInterval(() => {
+      i++;
+      setMenu((menu) => [...menu, sourceMenu[i]]);
+      console.log(i);
+      if (i >= sourceMenu.length - 1) {
+        clearInterval(interval);
+      }
+    }, 500);
+  };
+
   return (
-    <Menu autoSelect={false}>
+    <Menu autoSelect={false} onOpen={() => handleClick()}>
       <MenuButton
         as={Button}
-        rightIcon={<ChevronDownIcon />}
         bgColor="#41DA78"
         _active={{
           background: "#262626",
@@ -32,24 +58,33 @@ export const HeaderMenu = () => {
         _expanded={{ bg: "#3a3838" }}
         h="30px"
       >
-        Menu
+        <HamburgerIcon boxSize="20px" />
       </MenuButton>
       <MenuList bgColor="black" color="white" borderColor="#41DA78">
-        <MenuItem _focus={{ background: "#262626" }}>
-          <HeaderLink to="#">Home</HeaderLink>
-        </MenuItem>
-        <MenuItem _focus={{ background: "#262626" }}>
-          <HeaderLink to="#aboutme">Sobre</HeaderLink>
-        </MenuItem>
-        <MenuItem _focus={{ background: "#262626" }}>
-          <HeaderLink to="#skills">Conhecimento</HeaderLink>
-        </MenuItem>
-        <MenuItem _focus={{ background: "#262626" }}>
-          <HeaderLink to="#project">Projetos</HeaderLink>
-        </MenuItem>
-        <MenuItem _focus={{ background: "#262626" }}>
-          <HeaderLink to="#contact">Contato</HeaderLink>
-        </MenuItem>
+        {menu.map((item) => (
+          <Box
+            as={motion.div}
+            animate={{ y: [50, 25, 0], opacity: [0, 0.5, 1] }}
+            transition="1s linear"
+          >
+            <MenuItem _hover={{ background: "none" }}>
+              <HeaderLink to={item.to}>{item.description}</HeaderLink>
+            </MenuItem>
+          </Box>
+        ))}
+
+        {/* <MenuItem>
+            <HeaderLink to="#aboutme">Sobre</HeaderLink>
+          </MenuItem>
+          <MenuItem>
+            <HeaderLink to="#projects">Projetos</HeaderLink>
+          </MenuItem>
+          <MenuItem>
+            <HeaderLink to="#skills">Tecnologias</HeaderLink>
+          </MenuItem>
+          <MenuItem>
+            <HeaderLink to="#contact">Contato</HeaderLink>
+          </MenuItem>*/}
       </MenuList>
     </Menu>
   );

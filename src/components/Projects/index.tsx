@@ -11,11 +11,29 @@ import CodeReview from "../../assets/code-review-black-theme.svg";
 import { ProjectCard } from "./ProjectCards";
 import HDR from "../../../src/assets/projects/hora-do-rango-capstone.png";
 import doIt from "../../../src/assets/projects/do-it-caio-giffoni.png";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
 
 export const Projects = () => {
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    } else {
+      control.start("hidden");
+    }
+  }, [control, inView]);
+
+  const boxVariant = {
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+    hidden: { opacity: 0, scale: 0 },
+  };
   return (
     <Box
-      id="project"
+      id="projects"
       w="100%"
       p={["20px 20px", "20px 20px", "80px 120px"]}
       bgColor="#262626"
@@ -25,6 +43,10 @@ export const Projects = () => {
         Projetos
       </Heading>
       <Flex
+        as={motion.div}
+        ref={ref}
+        variants={boxVariant}
+        animate={control}
         direction={["column", "column", "row"]}
         justify="center"
         align="center"
@@ -46,7 +68,14 @@ export const Projects = () => {
         />
       </Flex>
       <HStack justify="center" mt="40px" w="100%">
-        <VStack spacing={5} w={["90%"]}>
+        <VStack
+          as={motion.div}
+          ref={ref}
+          variants={boxVariant}
+          animate={control}
+          spacing={5}
+          w={["90%"]}
+        >
           <ProjectCard
             print={HDR}
             title="Hora do Rango"

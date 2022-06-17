@@ -1,4 +1,5 @@
 import { Box, Heading, HStack, Icon, Text, VStack } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { FiMail } from "react-icons/fi";
 import { Link } from "react-router-dom";
@@ -22,7 +23,11 @@ export const Contact = () => {
             to={{ pathname: "https://www.linkedin.com/in/caiocgfg" }}
             target="_blank"
           >
-            <HStack>
+            <HStack
+              as={motion.div}
+              whileHover={{ scale: 1.3 }}
+              whileTap={{ scale: 0.9 }}
+            >
               <Icon boxSize="30px" as={AiFillLinkedin} /> <Text>@caiocgfg</Text>
             </HStack>
           </Link>
@@ -30,11 +35,19 @@ export const Contact = () => {
             to={{ pathname: "https://github.com/caiogiffoni" }}
             target="_blank"
           >
-            <HStack>
+            <HStack
+              as={motion.div}
+              whileHover={{ scale: 1.3 }}
+              whileTap={{ scale: 0.9 }}
+            >
               <Icon boxSize="30px" as={AiFillGithub} /> <Text>caiogiffoni</Text>
             </HStack>
           </Link>
-          <HStack>
+          <HStack
+            as={motion.div}
+            whileHover={{ scale: 1.3 }}
+            whileTap={{ scale: 0.9 }}
+          >
             <Icon boxSize="30px" as={FiMail} />{" "}
             <Text>caio_cgf@hotmail.com</Text>
           </HStack>

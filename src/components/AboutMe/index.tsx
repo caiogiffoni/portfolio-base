@@ -11,8 +11,30 @@ import {
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import Caio from "../../assets/Caio_Giffoni__Corte_-removebg-about-me.png";
-
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
 export const AboutMe = () => {
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    } else {
+      control.start("hidden");
+    }
+  }, [control, inView]);
+
+  const boxVariant = {
+    visible: {
+      y: [200, 100, 0],
+      opacity: [0, 0.5, 1],
+      transition: { duration: 2, ease: "linear" },
+    },
+    hidden: { opacity: 0 },
+  };
+
   return (
     <Box
       id="aboutme"
@@ -21,10 +43,22 @@ export const AboutMe = () => {
       bgColor="#262626"
       color="#41DA78"
     >
-      <Flex justify="center" align="center" mt="20px">
+      <Flex
+        as={motion.div}
+        ref={ref}
+        variants={boxVariant}
+        animate={control}
+        justify="center"
+        align="center"
+        mt="20px"
+      >
         <Heading color="white">Sobre</Heading>
       </Flex>
       <Flex
+        as={motion.div}
+        ref={ref}
+        variants={boxVariant}
+        animate={control}
         justify="center"
         align="center"
         w="100%"
@@ -45,18 +79,24 @@ export const AboutMe = () => {
             fronteiras, economia de recursos e automatização de sistemas e
             processos.
           </Text>
-          <Button color="white" bgColor="#41DA78" m="15px 0px">
-            <Link
-              target="_blank"
-              to={{
-                pathname:
-                  "https://www.dropbox.com/s/6svsp53qheyfgn6/Curr%C3%ADculo_Caio%20Giffoni%20F%20G%2020220324.pdf?dl=0",
-              }}
-            >
-              Download CV
-              <Icon as={TriangleDownIcon} />
-            </Link>
-          </Button>
+          <Box
+            as={motion.div}
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            <Button color="white" bgColor="#41DA78" m="15px 0px">
+              <Link
+                target="_blank"
+                to={{
+                  pathname:
+                    "https://www.dropbox.com/s/6svsp53qheyfgn6/Curr%C3%ADculo_Caio%20Giffoni%20F%20G%2020220324.pdf?dl=0",
+                }}
+              >
+                Download CV
+                <Icon as={TriangleDownIcon} />
+              </Link>
+            </Button>
+          </Box>
         </Box>
       </Flex>
     </Box>
