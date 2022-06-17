@@ -6,6 +6,7 @@ import {
   HStack,
   Icon,
   Image,
+  Input,
   Text,
   VStack,
 } from "@chakra-ui/react";
@@ -33,7 +34,7 @@ export const ProjectCard = ({
       color="white"
       p={["20px 20px", "20px 30px", "20px 60px"]}
       borderRadius="20px"
-      bgColor="#212121"
+      bgColor="#262626"
       w="100%"
       maxW="1120px"
     >

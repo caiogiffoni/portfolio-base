@@ -24,8 +24,10 @@ export const Knowledge = () => {
     "https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black&style=plastic",
     "https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white&style=plastic",
     "https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB&style=plastic",
+    "https://img.shields.io/badge/Redux-764ABC?style=for-the-badge&logo=redux&style=plastic",
     "https://img.shields.io/badge/-Chakra%20UI-5EC9CA?logo=chakra-ui&logoColor=white&style=plastic",
     "https://img.shields.io/badge/Material--UI-0081CB?style=for-the-badge&logo=mui&logoColor=white&style=plastic",
+    /*"https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&style=plastic",*/
     "https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white&style=plastic",
     "https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white&style=plastic",
   ];
@@ -46,7 +48,7 @@ export const Knowledge = () => {
       id="skills"
       w="100%"
       p={["40px 20px", "50px 20px", "60px 120px"]}
-      bgColor="#212121"
+      bgColor="#262626"
       color="#41DA78"
     >
       <HStack justify="center" mt="15px">
@@ -66,22 +68,27 @@ export const Knowledge = () => {
             const boxVariant = {
               initial: {
                 opacity: 0,
-                translateX: i % 2 === 0 ? -50 : 50,
-                translateY: -50,
+                translateX: i % 2 === 0 ? -70 : 70,
+                translateY: -70,
               },
               visible: {
                 opacity: 1,
                 translateX: 0,
                 translateY: 0,
-                transition: { duration: 0.3, delay: i * 0.2 },
+                transition: { duration: 0.7, delay: i * 0.3 },
               },
               hidden: { opacity: 0 },
             };
 
             return (
-              <motion.div animate={control} ref={ref} variants={boxVariant}>
+              <Box
+                as={motion.div}
+                animate={control}
+                ref={ref}
+                variants={boxVariant}
+              >
                 <Image w={[SmallScreen, BigScreen]} h="40px" src={item} />
-              </motion.div>
+              </Box>
             );
           })}
         </Flex>

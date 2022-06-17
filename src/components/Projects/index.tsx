@@ -11,6 +11,7 @@ import CodeReview from "../../assets/code-review-black-theme.svg";
 import { ProjectCard } from "./ProjectCards";
 import HDR from "../../../src/assets/projects/hora-do-rango-capstone.png";
 import doIt from "../../../src/assets/projects/do-it-caio-giffoni.png";
+import hub from "../../../src/assets/projects/kenzieHub.png";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
@@ -28,7 +29,7 @@ export const Projects = () => {
   }, [control, inView]);
 
   const boxVariant = {
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+    visible: { opacity: 1, scale: 1, transition: { duration: 1 } },
     hidden: { opacity: 0, scale: 0 },
   };
   return (
@@ -36,7 +37,7 @@ export const Projects = () => {
       id="projects"
       w="100%"
       p={["20px 20px", "20px 20px", "80px 120px"]}
-      bgColor="#262626"
+      bgColor="#212121"
       color="#41DA78"
     >
       <Heading textAlign="center" color="white">
@@ -80,7 +81,7 @@ export const Projects = () => {
             print={HDR}
             title="Hora do Rango"
             description="Aplicação para conectar clientes e cozinheiros. Foi um projeto feito
-            em grupo desde de a concepção até o término do MVP. Feita em Chakra UI."
+            em grupo desde de a concepção até o término do MVP. Feito em Chakra UI. "
             vercel="https://capstone-m3-grupo-5.vercel.app/"
             github="https://github.com/devadrianoabner/capstone-m3---grupo-5/"
           />
@@ -90,6 +91,13 @@ export const Projects = () => {
             description="Aplicação de lista de tarefas feita em react com styled components."
             vercel="https://do-it-caiogiffoni-app.vercel.app/"
             github="https://github.com/caiogiffoni/do-it-caiogiffoni-app"
+          />
+          <ProjectCard
+            print={hub}
+            title="Kenzie Hub"
+            description="Aplicação de cadastro de tecnologias, remoção e edição de tecnologias estudadas."
+            vercel="https://kenzie-hub-navy.vercel.app/"
+            github="https://github.com/caiogiffoni/kenzie-hub"
           />
         </VStack>
       </HStack>

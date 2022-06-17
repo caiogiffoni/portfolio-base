@@ -18,8 +18,8 @@ import { useEffect } from "react";
 
 export const Introduction = () => {
   const defaultOptions = {
-    loop: false,
-    autoplay: false,
+    loop: true,
+    autoplay: true,
     animationData: computerBoy,
   };
 

@@ -15,7 +15,6 @@ import {
 import { HeaderLink } from "../HeaderLink";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { setFlagsFromString } from "v8";
 
 export const HeaderMenu = () => {
   let i = 0;
