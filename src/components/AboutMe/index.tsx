@@ -91,7 +91,15 @@ export const AboutMe = () => {
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.9 }}
           >
-            <Button bgColor={colorWordsStyle} color={bgColor1} m="15px 0px">
+            <Button
+              bgColor={colorWordsStyle}
+              color={bgColor1}
+              _hover={{
+                background: bgColor1,
+                color: colorWordsStyle,
+              }}
+              m="15px 0px"
+            >
               <Link
                 target="_blank"
                 to={{

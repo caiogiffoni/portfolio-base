@@ -88,7 +88,14 @@ export const ProjectCard = ({
                 pathname: vercel,
               }}
             >
-              <Button bgColor={colorWordsStyle} color={bgColor1}>
+              <Button
+                bgColor={colorWordsStyle}
+                color={bgColor1}
+                _hover={{
+                  background: bgColor1,
+                  color: colorWordsStyle,
+                }}
+              >
                 Visite
               </Button>
             </Link>
@@ -98,7 +105,14 @@ export const ProjectCard = ({
                 pathname: github,
               }}
             >
-              <Button bgColor={colorWordsStyle} color={bgColor1}>
+              <Button
+                bgColor={colorWordsStyle}
+                color={bgColor1}
+                _hover={{
+                  background: bgColor1,
+                  color: colorWordsStyle,
+                }}
+              >
                 Github
                 <Icon as={AiFillGithub} ml="8px" />
               </Button>

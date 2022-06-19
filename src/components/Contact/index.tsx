@@ -146,6 +146,10 @@ export const Contact = () => {
                   bgColor={colorWordsStyle}
                   color={bgColor1}
                   mt="20px"
+                  _hover={{
+                    background: bgColor1,
+                    color: colorWordsStyle,
+                  }}
                 >
                   Enviar
                 </Button>
