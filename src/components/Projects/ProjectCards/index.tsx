@@ -58,7 +58,7 @@ export const ProjectCard = ({
       color="white"
       p={["20px 20px", "20px 30px", "20px 60px"]}
       borderRadius="20px"
-      bgColor="#262626"
+      bgColor="blackSecondary"
       w="100%"
       maxW="1120px"
     >

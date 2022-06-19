@@ -48,8 +48,8 @@ export const Knowledge = () => {
       id="skills"
       w="100%"
       p={["40px 20px", "50px 20px", "60px 120px"]}
-      bgColor="#262626"
-      color="#41DA78"
+      bgColor="blackSecondary"
+      color="greenPrimary"
     >
       <HStack justify="center" mt="15px">
         <Heading color="white">Tecnologias</Heading>

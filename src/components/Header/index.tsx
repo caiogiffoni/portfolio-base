@@ -9,7 +9,7 @@ import { HeaderLinkDesktop } from "./HeaderLinkDesktop";
 export const Header = () => {
   return (
     <HStack
-      bgColor="#212121"
+      bgColor="blackPrimary"
       h={["65px", "80px"]}
       w="100%"
       p={["0px 30px", "0px 80px"]}
@@ -30,7 +30,7 @@ export const Header = () => {
           w={["30px", "40px", "80px"]}
           borderRadius="32px"
         />
-        <Heading fontSize={["18px", "24px"]} color="#41DA78">
+        <Heading fontSize={["18px", "24px"]} color="greenPrimary">
           Caio Giffoni
         </Heading>
       </HStack>

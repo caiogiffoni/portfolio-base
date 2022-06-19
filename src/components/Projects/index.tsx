@@ -65,8 +65,8 @@ export const Projects = () => {
       id="projects"
       w="100%"
       p={["20px 20px", "20px 20px", "80px 120px"]}
-      bgColor="#212121"
-      color="#41DA78"
+      bgColor="blackPrimary"
+      color="greenPrimary"
     >
       <Heading textAlign="center" color="white">
         Projetos

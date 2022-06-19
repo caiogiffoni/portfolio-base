@@ -18,7 +18,7 @@ export const HeaderLink = ({ children, to }: HeaderLinkProps) => {
       <HashLink to={to} smooth>
         <Text
           _hover={{
-            color: "#41DA78",
+            color: "greenPrimary",
           }}
         >
           {children}

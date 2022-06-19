@@ -41,7 +41,7 @@ export const AboutMe = () => {
       w="100%"
       p={["40px 20px", "50px 20px", "60px 120px"]}
       bgColor="#262626"
-      color="#41DA78"
+      color="greenPrimary"
     >
       <Flex
         as={motion.div}
@@ -66,7 +66,7 @@ export const AboutMe = () => {
         gap={10}
         mt="20px"
       >
-        <Box bgColor="#60d88c" borderRadius="25px" w={["200px", "280px"]}>
+        <Box bgColor="greenPrimary" borderRadius="25px" w={["200px", "280px"]}>
           <Image src={Caio} />
         </Box>
         <Box p={["0px", "30px", "50px"]} w={["80%", "80%", "50%"]}>
@@ -84,7 +84,7 @@ export const AboutMe = () => {
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.9 }}
           >
-            <Button color="white" bgColor="#41DA78" m="15px 0px">
+            <Button color="white" bgColor="greenPrimary" m="15px 0px">
               <Link
                 target="_blank"
                 to={{

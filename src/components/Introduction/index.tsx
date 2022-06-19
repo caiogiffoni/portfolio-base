@@ -57,7 +57,7 @@ export const Introduction = () => {
       w="100%"
       p={["10px 20px", "10px 20px", "50px 120px"]}
       bgColor="#212121"
-      color="#41DA78"
+      color="greenPrimary"
     >
       <Flex
         justify="space-around"

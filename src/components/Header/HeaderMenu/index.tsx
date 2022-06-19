@@ -45,16 +45,16 @@ export const HeaderMenu = () => {
     <Menu autoSelect={false} onOpen={() => handleClick()}>
       <MenuButton
         as={Button}
-        bgColor="#41DA78"
+        bgColor="greenPrimary"
         _active={{
-          background: "#262626",
+          background: "blackSecondary",
           color: "white",
         }}
         _hover={{
-          background: "#262626",
+          background: "blackSecondary",
           color: "white",
         }}
-        _expanded={{ bg: "#3a3838" }}
+        _expanded={{ bg: "blackSecondary" }}
         h="30px"
       >
         <HamburgerIcon boxSize="20px" />

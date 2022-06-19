@@ -80,8 +80,8 @@ export const Contact = () => {
       id="contact"
       w="100%"
       p={["40px 20px", "50px 20px", "60px 120px"]}
-      bgColor="#212121"
-      color="#41DA78"
+      bgColor="blackPrimary"
+      color="greenPrimary"
     >
       <HStack justify="center" m="15px 0px">
         <Heading color="white">Contato</Heading>
@@ -91,7 +91,7 @@ export const Contact = () => {
         <Flex
           maxW="800px"
           w={["100%", "80%", "100%"]}
-          bgColor="#262626"
+          bgColor="blackSecondary"
           borderRadius="15px"
           justify={["center", "center", "space-around"]}
           align="center"
