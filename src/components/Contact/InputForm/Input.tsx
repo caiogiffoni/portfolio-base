@@ -18,11 +18,13 @@ import {
 } from "react";
 import { FieldError } from "react-hook-form";
 import { IconType } from "react-icons";
+import { useColors } from "../../../provider/Colors";
 
 interface InputProps extends ChakraInputProps {
   name: string;
   label?: string;
   error?: FieldError | null;
+  colorWordsDesc: string;
   icon?: IconType;
 }
 
@@ -32,13 +34,13 @@ type inputVariationOptions = {
 
 const inputVariation: inputVariationOptions = {
   error: "red.500",
-  default: "gray.200",
+  default: "gray.400",
   focus: "gray.800",
   filled: "green.500",
 };
 
 const InputBase: ForwardRefRenderFunction<HTMLInputElement, InputProps> = (
-  { name, error = null, icon, label, ...rest },
+  { name, error = null, icon, label, colorWordsDesc, ...rest },
   ref
 ) => {
   const [value, setValue] = useState("");
@@ -58,7 +60,7 @@ const InputBase: ForwardRefRenderFunction<HTMLInputElement, InputProps> = (
 
   return (
     <FormControl isInvalid={!!error}>
-      {label && <FormLabel color={"gray.400"}>{label}</FormLabel>}
+      {label && <FormLabel color={colorWordsDesc}>{label}</FormLabel>}
       <InputGroup flexDirection={"column"}>
         {icon && (
           <InputLeftElement mt="2.5" color={inputVariation[variation]}>
@@ -75,13 +77,15 @@ const InputBase: ForwardRefRenderFunction<HTMLInputElement, InputProps> = (
           variant="outline"
           onChangeCapture={(e) => setValue(e.currentTarget.value)}
           _hover={{ bgColor: "gray.10" }}
-          _placeholder={{ color: "gray.300" }}
+          _placeholder={{ color: "gray.500" }}
           size="lg"
           h="60px"
           ref={ref}
           {...rest}
         />
-        {!!error && <FormErrorMessage>{error.message}</FormErrorMessage>}
+        {!!error && (
+          <FormErrorMessage color="red.500">{error.message}</FormErrorMessage>
+        )}
       </InputGroup>
     </FormControl>
   );

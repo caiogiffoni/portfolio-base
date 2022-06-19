@@ -5,9 +5,11 @@ import {
   HStack,
   Image,
   Text,
+  useColorMode,
   VStack,
 } from "@chakra-ui/react";
 import CodeReview from "../../assets/code-review-black-theme.svg";
+import CodeReviewLight from "../../assets/code-review-light-theme.svg";
 import { ProjectCard } from "./ProjectCards";
 import HDR from "../../../src/assets/projects/hora-do-rango-capstone.png";
 import doIt from "../../../src/assets/projects/do-it-caio-giffoni.png";
@@ -15,8 +17,11 @@ import hub from "../../../src/assets/projects/kenzieHub.png";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
+import { useColors } from "../../provider/Colors";
 
 export const Projects = () => {
+  const { colorMode } = useColorMode();
+
   const control = useAnimation();
   const [ref, inView] = useInView();
 
@@ -60,17 +65,17 @@ export const Projects = () => {
     hidden: { opacity: 0, scale: 0 },
   };
 
+  const { colorWordsStyle, colorWordsDesc, bgColor1, bgColor2 } = useColors();
+
   return (
     <Box
       id="projects"
       w="100%"
       p={["20px 20px", "20px 20px", "80px 120px"]}
-      bgColor="blackPrimary"
-      color="greenPrimary"
+      bgColor={bgColor1}
+      color={colorWordsDesc}
     >
-      <Heading textAlign="center" color="white">
-        Projetos
-      </Heading>
+      <Heading textAlign="center">Projetos</Heading>
       <Flex
         as={motion.div}
         ref={ref}
@@ -83,7 +88,6 @@ export const Projects = () => {
         gap={20}
       >
         <Text
-          color="white"
           fontSize={["20px", "25px", "30px"]}
           w={["80%", "40%"]}
           order={["2", "2", "1"]}
@@ -91,7 +95,7 @@ export const Projects = () => {
           Alguns dos meus projetos estão abaixo:
         </Text>
         <Image
-          src={CodeReview}
+          src={colorMode === "light" ? CodeReviewLight : CodeReview}
           w={["220px", "300px"]}
           order={["1", "1", "2"]}
         />

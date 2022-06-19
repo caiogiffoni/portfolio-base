@@ -19,6 +19,7 @@ import { FieldError } from "react-hook-form";
 interface TextareaProps extends ChakraTextareaProps {
   name: string;
   label?: string;
+  colorWordsDesc: string;
   error?: FieldError | null;
 }
 
@@ -36,7 +37,7 @@ const inputVariation: textareaVariationOptions = {
 const TextareaBase: ForwardRefRenderFunction<
   HTMLTextAreaElement,
   TextareaProps
-> = ({ name, error = null, label, ...rest }, ref) => {
+> = ({ name, error = null, label, colorWordsDesc, ...rest }, ref) => {
   const [value, setValue] = useState("");
   const [variation, setVariation] = useState("default");
 
@@ -54,7 +55,7 @@ const TextareaBase: ForwardRefRenderFunction<
 
   return (
     <FormControl isInvalid={!!error}>
-      {label && <FormLabel color={"gray.400"}>{label}</FormLabel>}
+      {label && <FormLabel color={colorWordsDesc}>{label}</FormLabel>}
       <ChakraTextarea
         name={name}
         color={inputVariation[variation]}
@@ -65,7 +66,7 @@ const TextareaBase: ForwardRefRenderFunction<
         variant="outline"
         onChangeCapture={(e) => setValue(e.currentTarget.value)}
         _hover={{ bgColor: "gray.10" }}
-        _placeholder={{ color: "gray.300" }}
+        _placeholder={{ color: "gray.500" }}
         size="lg"
         h="100px"
         ref={ref}

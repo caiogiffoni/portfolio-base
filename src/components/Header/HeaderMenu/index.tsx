@@ -4,17 +4,13 @@ import {
   MenuButton,
   MenuList,
   MenuItem,
-  MenuItemOption,
-  MenuGroup,
-  MenuOptionGroup,
-  MenuDivider,
   Button,
   Box,
-  Link,
 } from "@chakra-ui/react";
 import { HeaderLink } from "../HeaderLink";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { useColors } from "../../../provider/Colors";
 
 export const HeaderMenu = () => {
   let i = 0;
@@ -34,32 +30,37 @@ export const HeaderMenu = () => {
     const interval = setInterval(() => {
       i++;
       setMenu((menu) => [...menu, sourceMenu[i]]);
-      console.log(i);
       if (i >= sourceMenu.length - 1) {
         clearInterval(interval);
       }
     }, 500);
   };
 
+  const { colorWordsStyle, colorWordsDesc, bgColor1, bgColor2 } = useColors();
+
   return (
     <Menu autoSelect={false} onOpen={() => handleClick()}>
       <MenuButton
         as={Button}
-        bgColor="greenPrimary"
+        bgColor={colorWordsStyle}
         _active={{
-          background: "blackSecondary",
-          color: "white",
+          background: bgColor2,
+          color: colorWordsDesc,
         }}
         _hover={{
-          background: "blackSecondary",
-          color: "white",
+          background: bgColor2,
+          color: colorWordsDesc,
         }}
-        _expanded={{ bg: "blackSecondary" }}
+        _expanded={{ bg: colorWordsStyle }}
         h="30px"
       >
-        <HamburgerIcon boxSize="20px" />
+        <HamburgerIcon boxSize="20px" color="white" />
       </MenuButton>
-      <MenuList bgColor="black" color="white" borderColor="#41DA78">
+      <MenuList
+        bgColor={bgColor1}
+        color={colorWordsDesc}
+        borderColor={colorWordsStyle}
+      >
         {menu.map((item, i) => (
           <Box
             as={motion.div}

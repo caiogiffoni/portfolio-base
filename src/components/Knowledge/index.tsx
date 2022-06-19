@@ -13,6 +13,7 @@ import Javascript from "../../assets/badge-cards/javascript.svg";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
+import { useColors } from "../../provider/Colors";
 
 export const Knowledge = () => {
   const BigScreen = "130px";
@@ -43,16 +44,17 @@ export const Knowledge = () => {
     }
   }, [control, inView]);
 
+  const { colorWordsDesc, bgColor2 } = useColors();
+
   return (
     <Box
       id="skills"
       w="100%"
       p={["40px 20px", "50px 20px", "60px 120px"]}
-      bgColor="blackSecondary"
-      color="greenPrimary"
+      bgColor={bgColor2}
     >
       <HStack justify="center" mt="15px">
-        <Heading color="white">Tecnologias</Heading>
+        <Heading color={colorWordsDesc}>Tecnologias</Heading>
       </HStack>
       <Flex w="100%" justify="center" align="center">
         <Flex

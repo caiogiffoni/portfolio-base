@@ -14,6 +14,7 @@ import Caio from "../../assets/Caio_Giffoni__Corte_-removebg-about-me.png";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
+import { useColors } from "../../provider/Colors";
 export const AboutMe = () => {
   const control = useAnimation();
   const [ref, inView] = useInView();
@@ -35,13 +36,15 @@ export const AboutMe = () => {
     hidden: { opacity: 0 },
   };
 
+  const { colorWordsStyle, colorWordsDesc, bgColor1, bgColor2 } = useColors();
+
   return (
     <Box
       id="aboutme"
       w="100%"
       p={["40px 20px", "50px 20px", "60px 120px"]}
-      bgColor="#262626"
-      color="greenPrimary"
+      bgColor={bgColor2}
+      color={colorWordsDesc}
     >
       <Flex
         as={motion.div}
@@ -52,7 +55,7 @@ export const AboutMe = () => {
         align="center"
         mt="20px"
       >
-        <Heading color="white">Sobre</Heading>
+        <Heading>Sobre</Heading>
       </Flex>
       <Flex
         as={motion.div}
@@ -66,11 +69,15 @@ export const AboutMe = () => {
         gap={10}
         mt="20px"
       >
-        <Box bgColor="greenPrimary" borderRadius="25px" w={["200px", "280px"]}>
+        <Box
+          bgColor={colorWordsStyle}
+          borderRadius="25px"
+          w={["200px", "280px"]}
+        >
           <Image src={Caio} />
         </Box>
         <Box p={["0px", "30px", "50px"]} w={["80%", "80%", "50%"]}>
-          <Text color="white" fontSize={["15px", "18px"]}>
+          <Text fontSize={["15px", "18px"]}>
             Desenvolvedor FrontEnd, estudando backend, formado em engenharia
             civil com MBA em gerenciamento de projetos. Após alguns anos na
             construção civil, decidi assumir um novo desafio e mergulhar no
@@ -84,7 +91,7 @@ export const AboutMe = () => {
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.9 }}
           >
-            <Button color="white" bgColor="greenPrimary" m="15px 0px">
+            <Button bgColor={colorWordsStyle} color={bgColor1} m="15px 0px">
               <Link
                 target="_blank"
                 to={{

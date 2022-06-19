@@ -5,8 +5,8 @@ import {
   Heading,
   HStack,
   Icon,
-  Input,
   Text,
+  useColorMode,
   useToast,
   VStack,
 } from "@chakra-ui/react";
@@ -25,6 +25,8 @@ import { InputForm } from "./InputForm/Input";
 
 import Lottie from "react-lottie";
 import letter from "../../assets/contact-email-green.json";
+import blueLetter from "../../assets/contact-email-blue1.json";
+import { useColors } from "../../provider/Colors";
 
 interface SendData {
   name: string;
@@ -33,12 +35,13 @@ interface SendData {
 }
 
 export const Contact = () => {
+  const { colorMode } = useColorMode();
   const toast = useToast();
 
   const defaultOptions = {
     loop: true,
     autoplay: true,
-    animationData: letter,
+    animationData: colorMode === "light" ? blueLetter : letter,
   };
 
   const sendEmail = (data: SendData) => {
@@ -75,23 +78,25 @@ export const Contact = () => {
     reset,
     formState: { errors },
   } = useForm<SendData>({ resolver: yupResolver(signInSchema) });
+
+  const { colorWordsStyle, colorWordsDesc, bgColor1, bgColor2 } = useColors();
+
   return (
     <Box
       id="contact"
       w="100%"
       p={["40px 20px", "50px 20px", "60px 120px"]}
-      bgColor="blackPrimary"
-      color="greenPrimary"
+      bgColor={bgColor1}
     >
       <HStack justify="center" m="15px 0px">
-        <Heading color="white">Contato</Heading>
+        <Heading color={colorWordsDesc}>Contato</Heading>
       </HStack>
 
       <HStack justify="center">
         <Flex
           maxW="800px"
           w={["100%", "80%", "100%"]}
-          bgColor="blackSecondary"
+          bgColor={bgColor2}
           borderRadius="15px"
           justify={["center", "center", "space-around"]}
           align="center"
@@ -110,6 +115,7 @@ export const Contact = () => {
                 label="Nome"
                 icon={FaUser}
                 error={errors.name}
+                colorWordsDesc={colorWordsDesc}
                 {...register("name")}
               />
               <InputForm
@@ -117,6 +123,7 @@ export const Contact = () => {
                 label="Email"
                 icon={FaEnvelope}
                 error={errors.email}
+                colorWordsDesc={colorWordsDesc}
                 {...register("email")}
               />
               <TextareaForm
@@ -125,6 +132,7 @@ export const Contact = () => {
                 placeholder="Digite sua mensagem"
                 label="Mensagem"
                 error={errors.message}
+                colorWordsDesc={colorWordsDesc}
                 {...register("message")}
               />
               <Box
@@ -133,7 +141,12 @@ export const Contact = () => {
                 whileHover={{ scale: 1.3 }}
                 whileTap={{ scale: 0.9 }}
               >
-                <Button type="submit" colorScheme="green" mt="20px">
+                <Button
+                  type="submit"
+                  bgColor={colorWordsStyle}
+                  color={bgColor1}
+                  mt="20px"
+                >
                   Enviar
                 </Button>
               </Box>
@@ -145,7 +158,7 @@ export const Contact = () => {
                 <Lottie options={defaultOptions} />
               </Box>
 
-              <VStack>
+              <VStack color={colorWordsStyle}>
                 <Link
                   to={{ pathname: "https://www.linkedin.com/in/caiocgfg" }}
                   target="_blank"

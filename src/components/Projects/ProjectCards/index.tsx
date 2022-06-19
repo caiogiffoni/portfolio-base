@@ -17,6 +17,7 @@ import { AiFillGithub } from "react-icons/ai";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
+import { useColors } from "../../../provider/Colors";
 
 interface ProjectCardsProps {
   title: string;
@@ -49,16 +50,18 @@ export const ProjectCard = ({
     hidden: { opacity: 0, scale: 0 },
   };
 
+  const { colorWordsStyle, colorWordsDesc, bgColor1, bgColor2 } = useColors();
+
   return (
     <Box
       as={motion.div}
       ref={ref}
       variants={boxVariant}
       animate={control}
-      color="white"
+      color={colorWordsDesc}
+      bgColor={bgColor2}
       p={["20px 20px", "20px 30px", "20px 60px"]}
       borderRadius="20px"
-      bgColor="blackSecondary"
       w="100%"
       maxW="1120px"
     >
@@ -85,7 +88,9 @@ export const ProjectCard = ({
                 pathname: vercel,
               }}
             >
-              <Button colorScheme="green">Visite</Button>
+              <Button bgColor={colorWordsStyle} color={bgColor1}>
+                Visite
+              </Button>
             </Link>
             <Link
               target="_blank"
@@ -93,7 +98,7 @@ export const ProjectCard = ({
                 pathname: github,
               }}
             >
-              <Button colorScheme="green">
+              <Button bgColor={colorWordsStyle} color={bgColor1}>
                 Github
                 <Icon as={AiFillGithub} ml="8px" />
               </Button>

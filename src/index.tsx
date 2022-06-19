@@ -2,9 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, ColorModeScript } from "@chakra-ui/react";
 import { BrowserRouter } from "react-router-dom";
-import { Portfolioheme } from "./theme";
+import { PortfolioTheme } from "./theme";
+import theme from "./theme/theme";
+import Providers from "./provider";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -12,8 +14,11 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <ChakraProvider theme={Portfolioheme}>
-        <App />
+      <ChakraProvider theme={PortfolioTheme}>
+        <Providers>
+          <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+          <App />
+        </Providers>
       </ChakraProvider>
     </BrowserRouter>
   </React.StrictMode>
