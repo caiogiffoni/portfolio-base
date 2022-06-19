@@ -25,7 +25,7 @@ export const Projects = () => {
       print: HDR,
       title: "Hora do Rango",
       description:
-        "Aplicação para conectar clientes e cozinheiros. Foi um projeto feito em grupo desde de a concepção até o término do MVP. Feito em Chakra UI. ",
+        "Aplicação para conectar clientes e cozinheiros. Foi um projeto feito em grupo desde a concepção até o término do MVP. Feito em Chakra UI. ",
       vercel: "https://capstone-m3-grupo-5.vercel.app/",
       github: "https://github.com/devadrianoabner/capstone-m3---grupo-5/",
     },

@@ -24,7 +24,7 @@ import { TextareaForm } from "./TextAreaForm/TextareaForm";
 import { InputForm } from "./InputForm/Input";
 
 import Lottie from "react-lottie";
-import letter from "../../assets/contact-email.json";
+import letter from "../../assets/contact-email-green.json";
 
 interface SendData {
   name: string;
