@@ -3,7 +3,6 @@ import {
   FormErrorMessage,
   FormLabel,
   Textarea as ChakraTextarea,
-  InputGroup,
   TextareaProps as ChakraTextareaProps,
 } from "@chakra-ui/react";
 import {
@@ -14,13 +13,13 @@ import {
   ForwardRefRenderFunction,
   forwardRef,
 } from "react";
-import { FieldError } from "react-hook-form";
 
 interface TextareaProps extends ChakraTextareaProps {
   name: string;
   label?: string;
   colorWordsDesc: string;
-  error?: FieldError | null;
+  error?: string | null;
+  lx: any;
 }
 
 type textareaVariationOptions = {
@@ -37,7 +36,7 @@ const inputVariation: textareaVariationOptions = {
 const TextareaBase: ForwardRefRenderFunction<
   HTMLTextAreaElement,
   TextareaProps
-> = ({ name, error = null, label, colorWordsDesc, ...rest }, ref) => {
+> = ({ name, error = null, label, colorWordsDesc, lx, ...rest }, ref) => {
   const [value, setValue] = useState("");
   const [variation, setVariation] = useState("default");
 
@@ -70,9 +69,10 @@ const TextareaBase: ForwardRefRenderFunction<
         size="lg"
         h="100px"
         ref={ref}
+        {...lx.inputProps}
         {...rest}
       />
-      {!!error && <FormErrorMessage>{error.message}</FormErrorMessage>}
+      {!!error && <FormErrorMessage>{error}</FormErrorMessage>}
     </FormControl>
   );
 };

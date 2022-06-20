@@ -17,9 +17,6 @@ import { Link } from "react-router-dom";
 import emailjs from "emailjs-com";
 import { FaEnvelope, FaUser } from "react-icons/fa";
 import { BiMessageSquareDetail } from "react-icons/bi";
-import { useForm } from "react-hook-form";
-import * as yup from "yup";
-import { yupResolver } from "@hookform/resolvers/yup";
 import { TextareaForm } from "./TextAreaForm/TextareaForm";
 import { InputForm } from "./InputForm/Input";
 
@@ -27,6 +24,7 @@ import Lottie from "react-lottie";
 import letter from "../../assets/contact-email-green.json";
 import blueLetter from "../../assets/contact-email-blue1.json";
 import { useColors } from "../../provider/Colors";
+import { useForm, useInput } from "lx-react-form";
 
 interface SendData {
   name: string;
@@ -44,40 +42,41 @@ export const Contact = () => {
     animationData: colorMode === "light" ? blueLetter : letter,
   };
 
-  const sendEmail = (data: SendData) => {
-    console.log(data);
-
-    const serviceId = "service_4tl3yeb";
-    const templateId = "template_4f1ukju";
-    const userId = "2V7TRTN8xJ94d9cQs";
-
-    emailjs
-      .send(serviceId, templateId, { ...data }, userId)
-      .then((_) => {
-        toast({
-          title: "Mensagem enviada",
-          description: "Em breve entraremos em contato",
-          status: "success",
-          duration: 9000,
-          isClosable: true,
-        });
-        reset();
-      })
-      .then((error) => console.log(error));
-  };
-
-  const signInSchema = yup.object().shape({
-    name: yup.string().required("Nome obrigatório"),
-    email: yup.string().required("Email Obrigatório").email("Email inválido"),
-    message: yup.string().required("Mensagem obrigatória"),
+  const name = useInput({
+    name: "name",
   });
 
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors },
-  } = useForm<SendData>({ resolver: yupResolver(signInSchema) });
+  const email = useInput({
+    name: "email",
+    validation: "email",
+  });
+
+  const message = useInput({
+    name: "message",
+  });
+
+  const form = useForm({
+    clearFields: true,
+    formFields: [name, email, message],
+    submitCallback: (formData) => {
+      const serviceId = "service_4tl3yeb";
+      const templateId = "template_4f1ukju";
+      const userId = "2V7TRTN8xJ94d9cQs";
+
+      emailjs
+        .send(serviceId, templateId, { ...formData }, userId)
+        .then((_) => {
+          toast({
+            title: "Mensagem enviada",
+            description: "Em breve entraremos em contato",
+            status: "success",
+            duration: 9000,
+            isClosable: true,
+          });
+        })
+        .then((error) => console.log(error));
+    },
+  });
 
   const { colorWordsStyle, colorWordsDesc, bgColor1, bgColor2 } = useColors();
 
@@ -105,7 +104,7 @@ export const Contact = () => {
           <VStack h="100%" w={["90%", "80%", "50%"]}>
             <VStack
               as="form"
-              onSubmit={handleSubmit(sendEmail)}
+              onSubmit={form.handleSubmit}
               mt="25px"
               h="100%"
               p="0px 20px"
@@ -113,27 +112,30 @@ export const Contact = () => {
               <InputForm
                 placeholder="Digite seu nome"
                 label="Nome"
+                name="Nome"
                 icon={FaUser}
-                error={errors.name}
+                error={name.error}
                 colorWordsDesc={colorWordsDesc}
-                {...register("name")}
+                lx={name}
               />
               <InputForm
                 placeholder="Digite seu email"
                 label="Email"
+                name="Email"
                 icon={FaEnvelope}
-                error={errors.email}
+                error={email.error}
                 colorWordsDesc={colorWordsDesc}
-                {...register("email")}
+                lx={email}
               />
               <TextareaForm
                 pt="15px"
                 pl="30px"
                 placeholder="Digite sua mensagem"
                 label="Mensagem"
-                error={errors.message}
+                name="Mensagem"
+                error={message.error}
                 colorWordsDesc={colorWordsDesc}
-                {...register("message")}
+                lx={message}
               />
               <Box
                 pb="15px"
