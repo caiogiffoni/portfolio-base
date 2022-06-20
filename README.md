@@ -32,3 +32,4 @@ Para essa aplicação, não foi utilizado figma
 - [x] Adicionar DarkMode
 - [ ] Mudar layout Card Tecnologias
 - [ ] Adicionar experiencia
+- [ ] Toggle inglês
