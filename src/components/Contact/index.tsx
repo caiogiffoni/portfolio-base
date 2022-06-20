@@ -26,12 +26,6 @@ import blueLetter from "../../assets/contact-email-blue1.json";
 import { useColors } from "../../provider/Colors";
 import { useForm, useInput } from "lx-react-form";
 
-interface SendData {
-  name: string;
-  email: string;
-  message: string;
-}
-
 export const Contact = () => {
   const { colorMode } = useColorMode();
   const toast = useToast();
