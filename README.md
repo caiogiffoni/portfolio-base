@@ -20,7 +20,7 @@ Para essa aplicação, não foi utilizado figma
 
 - [x] React
 - [x] Chakra UI
-- [x] Yup / React Hook Form
+- [x] Yup / React Hook Form / Lx React form
 - [x] Framer Motion
 
 ## 🌐 Deploy
