@@ -23,7 +23,7 @@ interface ProjectCardsProps {
   title: string;
   description: string;
   github: string;
-  vercel: string;
+  deploy: string;
   print: string;
 }
 
@@ -31,7 +31,7 @@ export const ProjectCard = ({
   title,
   description,
   github,
-  vercel,
+  deploy,
   print,
 }: ProjectCardsProps) => {
   const control = useAnimation();
@@ -85,7 +85,7 @@ export const ProjectCard = ({
             <Link
               target="_blank"
               to={{
-                pathname: vercel,
+                pathname: deploy,
               }}
             >
               <Button

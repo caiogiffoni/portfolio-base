@@ -15,6 +15,7 @@ import HDR from "../../../src/assets/projects/hora-do-rango-capstone.png";
 import doIt from "../../../src/assets/projects/do-it-caio-giffoni.png";
 import hub from "../../../src/assets/projects/kenzieHub.png";
 import stoic from "../../../src/assets/projects/stoic-quote.png";
+import crud from "../../../src/assets/projects/crud-usuarios.png";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
@@ -32,7 +33,7 @@ export const Projects = () => {
       title: "Hora do Rango",
       description:
         "Aplicação para conectar clientes e cozinheiros. Foi um projeto feito em grupo desde a concepção até o término do MVP. Utilizado uma api simples para suportar requisições",
-      vercel: "https://capstone-m3-grupo-5.vercel.app/",
+      deploy: "https://capstone-m3-grupo-5.vercel.app/",
       github: "https://github.com/devadrianoabner/capstone-m3---grupo-5/",
     },
     {
@@ -40,7 +41,7 @@ export const Projects = () => {
       title: "do.it",
       description:
         "Aplicação de lista de tarefas feita em react com styled components. Foi utilizado api externa.",
-      vercel: "https://do-it-caiogiffoni-app.vercel.app/",
+      deploy: "https://do-it-caiogiffoni-app.vercel.app/",
       github: "https://github.com/caiogiffoni/do-it-caiogiffoni-app",
     },
     {
@@ -48,7 +49,7 @@ export const Projects = () => {
       title: "Kenzie Hub",
       description:
         "Aplicação de cadastro de tecnologias, remoção e edição de tecnologias estudadas.  Foi utilizado api externa.",
-      vercel: "https://kenzie-hub-navy.vercel.app/",
+      deploy: "https://kenzie-hub-navy.vercel.app/",
       github: "https://github.com/caiogiffoni/kenzie-hub",
     },
     {
@@ -56,8 +57,16 @@ export const Projects = () => {
       title: "Stoic Quote Machine",
       description:
         "Aplicação simples de citações de filósofos estoicos com botão para compartilhar no twitter.",
-      vercel: "https://stoic-quote-machine-caio-giffoni.vercel.app/",
+      deploy: "https://stoic-quote-machine-caio-giffoni.vercel.app/",
       github: "https://github.com/caiogiffoni/random-quote-machine",
+    },
+    {
+      print: crud,
+      title: "CRUD - Usuários",
+      description:
+        "Aplicação simples de cadastro, listagem, alteração e remoção de usuários.",
+      deploy: "https://api-initial-crud.herokuapp.com/",
+      github: "https://github.com/caiogiffoni/crud-user-caiogiffoni",
     },
   ];
 
@@ -116,7 +125,7 @@ export const Projects = () => {
               print={project.print}
               title={project.title}
               description={project.description}
-              vercel={project.vercel}
+              deploy={project.deploy}
               github={project.github}
               key={i}
             />
