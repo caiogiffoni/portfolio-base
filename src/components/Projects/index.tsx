@@ -65,7 +65,7 @@ export const Projects = () => {
       print: crud,
       title: "CRUD - Usuários",
       description:
-        "Aplicação simples de cadastro, listagem, alteração e remoção de usuários.",
+        "API de uma aplicação simples de cadastro, listagem, alteração e remoção de usuários.",
       deploy: "https://caiogiffoni.github.io/crud-user-caiogiffoni-doc/",
       github: "https://github.com/caiogiffoni/crud-user-caiogiffoni",
     },

@@ -75,7 +75,6 @@ export const ProjectCard = ({
           src={print}
           alt="HDR"
           w={["310px", "310px", "310px", "310px", "410px"]}
-          maxH="218px"
         />
         <VStack align="flex-start" maxW="600px">
           <Heading fontSize={["25px", "30px"]}>{title}</Heading>
