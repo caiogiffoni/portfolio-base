@@ -16,6 +16,7 @@ import doIt from "../../../src/assets/projects/do-it-caio-giffoni.png";
 import hub from "../../../src/assets/projects/kenzieHub.png";
 import stoic from "../../../src/assets/projects/stoic-quote.png";
 import crud from "../../../src/assets/projects/crud-usuarios.png";
+import hosteando from "../../../src/assets/projects/hosteando.png";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
@@ -65,8 +66,16 @@ export const Projects = () => {
       title: "CRUD - Usuários",
       description:
         "Aplicação simples de cadastro, listagem, alteração e remoção de usuários.",
-      deploy: "https://api-initial-crud.herokuapp.com/",
+      deploy: "https://caiogiffoni.github.io/crud-user-caiogiffoni-doc/",
       github: "https://github.com/caiogiffoni/crud-user-caiogiffoni",
+    },
+    {
+      print: hosteando,
+      title: "Hosteando - Eventos",
+      description:
+        "API para hospedagem de eventos com várias entidades e relação entre elas. Foi utilizado NodeJs, Express e TypeORM.",
+      deploy: "https://capstonehostevents.github.io/Hosteando-Docs/",
+      github: "https://github.com/CapstoneHostEvents/Hosteando",
     },
   ];
 
@@ -83,7 +92,7 @@ export const Projects = () => {
     hidden: { opacity: 0, scale: 0 },
   };
 
-  const { colorWordsStyle, colorWordsDesc, bgColor1, bgColor2 } = useColors();
+  const { colorWordsDesc, bgColor1 } = useColors();
 
   return (
     <Box
