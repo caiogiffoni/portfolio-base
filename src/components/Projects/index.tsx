@@ -17,6 +17,10 @@ import hub from "../../../src/assets/projects/kenzieHub.png";
 import stoic from "../../../src/assets/projects/stoic-quote.png";
 import crud from "../../../src/assets/projects/crud-usuarios.png";
 import hosteando from "../../../src/assets/projects/hosteando.png";
+import anchor from "../../../src/assets/projects/anchor.png";
+import bandkamp from "../../../src/assets/projects/bandkamp.png";
+import kmdb from "../../../src/assets/projects/kmdb.png";
+import dollarstore from "../../../src/assets/projects/dollarstore.png";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
@@ -62,6 +66,14 @@ export const Projects = () => {
       github: "https://github.com/caiogiffoni/random-quote-machine",
     },
     {
+      print: hosteando,
+      title: "Hosteando",
+      description:
+        "API para hospedagem de eventos com várias entidades e relação entre elas. Foi utilizado NodeJs, Express e TypeORM.",
+      deploy: "https://capstonehostevents.github.io/Hosteando-Docs/",
+      github: "https://github.com/CapstoneHostEvents/Hosteando",
+    },
+    {
       print: crud,
       title: "CRUD - Usuários",
       description:
@@ -70,12 +82,39 @@ export const Projects = () => {
       github: "https://github.com/caiogiffoni/crud-user-caiogiffoni",
     },
     {
-      print: hosteando,
-      title: "Hosteando - Eventos",
+      print: anchor,
+      title: "Anchor",
       description:
-        "API para hospedagem de eventos com várias entidades e relação entre elas. Foi utilizado NodeJs, Express e TypeORM.",
-      deploy: "https://capstonehostevents.github.io/Hosteando-Docs/",
-      github: "https://github.com/CapstoneHostEvents/Hosteando",
+        "API para hospedagem de eventos com várias regras de negócio e escopo diferenciado. Foi utilizado Django, Django RestFramework e Docker.",
+      deploy: "https://anchor-tcm-m5.herokuapp.com/schema/swagger-ui/",
+      github: "https://github.com/matheusprado1/anchor-tcm-m5",
+    },
+    {
+      print: bandkamp,
+      title: "BandKamp",
+      description:
+        "API para gerenciamento de discografia de artistas. Foi utilizado Django, Django RestFramework e Docker.",
+      deploy: "https://band-kamp-caio.herokuapp.com/api/schema/swagger-ui/",
+      github:
+        "https://github.com/Kenzie-Academy-Brasil-Developers/m5-s6-bandkamp-caiogiffoni",
+    },
+    {
+      print: kmdb,
+      title: "KMDB",
+      description:
+        "API para gerenciamento de filmes e reviews. Foi utilizado Django, Django RestFramework.",
+      deploy: "https://kmdb-caio.herokuapp.com/api/docs/",
+      github:
+        "https://github.com/Kenzie-Academy-Brasil-Developers/m5-sprint4-kmdb-caiogiffoni",
+    },
+    {
+      print: dollarstore,
+      title: "Dollar Store",
+      description:
+        "API para gerenciamento de usuários e produtos. Foi utilizado Django, Django RestFramework com Generics API.",
+      deploy: "https://dollar-store-api.herokuapp.com/api/docs/",
+      github:
+        "https://github.com/Kenzie-Academy-Brasil-Developers/m5-sprint5-komercio-caiogiffoni",
     },
   ];
 

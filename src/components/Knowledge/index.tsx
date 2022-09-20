@@ -8,7 +8,6 @@ import {
   Image,
   Text,
 } from "@chakra-ui/react";
-import Javascript from "../../assets/badge-cards/javascript.svg";
 
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -31,6 +30,8 @@ export const Knowledge = () => {
     /*"https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&style=plastic",*/
     "https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white&style=plastic",
     "https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white&style=plastic",
+    "https://img.shields.io/badge/-Python-275378?logo=python&logoColor=f0e336&style=plastic",
+    "https://img.shields.io/badge/-Django-092E20?logo=django&logoColor=white&style=plastic",
   ];
 
   const control = useAnimation();
