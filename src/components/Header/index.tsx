@@ -15,7 +15,7 @@ import { HeaderMenu } from "./HeaderMenu";
 
 export const Header = () => {
   const { colorMode, toggleColorMode } = useColorMode();
-  const { colorWordsStyle, colorWordsDesc, bgColor1 } = useColors();
+  const { colorWordsStyle, bgColor1 } = useColors();
 
   return (
     <HStack
