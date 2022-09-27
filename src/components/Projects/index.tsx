@@ -21,6 +21,7 @@ import anchor from "../../../src/assets/projects/anchor.png";
 import bandkamp from "../../../src/assets/projects/bandkamp.png";
 import kmdb from "../../../src/assets/projects/kmdb.png";
 import dollarstore from "../../../src/assets/projects/dollarstore.png";
+import clientarchive from "../../../src/assets/projects/client-archive.png";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
@@ -115,6 +116,14 @@ export const Projects = () => {
       deploy: "https://dollar-store-api.herokuapp.com/api/docs/",
       github:
         "https://github.com/Kenzie-Academy-Brasil-Developers/m5-sprint5-komercio-caiogiffoni",
+    },
+    {
+      print: clientarchive,
+      title: "Clients Archive - FullStack",
+      description:
+        "Aplicação FullStack de cadastro, visualização, atualização e remoção de clients e contatos com registro, login autenticação e permissões diversas.",
+      deploy: "https://clients-archive-react-js.vercel.app/",
+      github: "https://github.com/caiogiffoni/clients-archive",
     },
   ];
 
