@@ -36,7 +36,7 @@ export const CardKnowledge = ({
       translateX: 0,
       translateY: 0,
       transition: {
-        duration: isLargerThan1280 ? i * 0.3 : 0.8,
+        duration: 0.7,
         delay: isLargerThan1280 ? i * 0.3 : 0.3,
       },
     },
