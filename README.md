@@ -30,6 +30,6 @@ Para essa aplicação, não foi utilizado figma
 ## 👨🏻‍💻 Backlog
 
 - [x] Adicionar DarkMode
-- [ ] Mudar layout Card Tecnologias
+- [x] Mudar layout Card Tecnologias
 - [ ] Adicionar experiencia
 - [ ] Toggle inglês
