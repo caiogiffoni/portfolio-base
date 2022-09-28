@@ -78,13 +78,12 @@ export const AboutMe = () => {
         </Box>
         <Box p={["0px", "30px", "50px"]} w={["80%", "80%", "50%"]}>
           <Text fontSize={["15px", "18px"]}>
-            Desenvolvedor FrontEnd, estudando backend, formado em engenharia
-            civil com MBA em gerenciamento de projetos. Após alguns anos na
-            construção civil, decidi assumir um novo desafio e mergulhar no
-            mundo do desenvolvimento web. Sempre fui fascinado pelas
-            possibilidades que a tecnologia proporciona: diminuição de
-            fronteiras, economia de recursos e automatização de sistemas e
-            processos.
+            Desenvolvedor Full Stack, formado em engenharia civil com MBA em
+            gerenciamento de projetos. Após alguns anos na construção civil,
+            decidi assumir um novo desafio e mergulhar no mundo do
+            desenvolvimento web. Sempre fui fascinado pelas possibilidades que a
+            tecnologia proporciona: diminuição de fronteiras, economia de
+            recursos e automatização de sistemas e processos.
           </Text>
           <Box
             as={motion.div}
@@ -104,7 +103,7 @@ export const AboutMe = () => {
                 target="_blank"
                 to={{
                   pathname:
-                    "https://www.dropbox.com/s/6svsp53qheyfgn6/Curr%C3%ADculo_Caio%20Giffoni%20F%20G%2020220324.pdf?dl=0",
+                    "https://www.dropbox.com/s/s70axll6i1dy65s/Curr%C3%ADculo_Caio%20Giffoni%20F%20G%2020220923%20pt.pdf?dl=0",
                 }}
               >
                 Download CV
