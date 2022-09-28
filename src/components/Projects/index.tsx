@@ -35,6 +35,14 @@ export const Projects = () => {
 
   const PC = [
     {
+      print: anchor,
+      title: "Anchor",
+      description:
+        "API para hospedagem de eventos com várias regras de negócio e escopo diferenciado. Foi utilizado Django, Django RestFramework e Docker.",
+      deploy: "https://anchor-tcm-m5.herokuapp.com/schema/swagger-ui/",
+      github: "https://github.com/matheusprado1/anchor-tcm-m5",
+    },
+    {
       print: HDR,
       title: "Hora do Rango",
       description:
@@ -43,28 +51,20 @@ export const Projects = () => {
       github: "https://github.com/devadrianoabner/capstone-m3---grupo-5/",
     },
     {
+      print: clientarchive,
+      title: "Clients Archive - FullStack",
+      description:
+        "Aplicação FullStack de cadastro, visualização, atualização e remoção de clients e contatos com registro, login autenticação e permissões diversas.",
+      deploy: "https://clients-archive-react-js.vercel.app/",
+      github: "https://github.com/caiogiffoni/clients-archive",
+    },
+    {
       print: doIt,
       title: "do.it",
       description:
         "Aplicação de lista de tarefas feita em react com styled components. Foi utilizado api externa.",
       deploy: "https://do-it-caiogiffoni-app.vercel.app/",
       github: "https://github.com/caiogiffoni/do-it-caiogiffoni-app",
-    },
-    {
-      print: hub,
-      title: "Kenzie Hub",
-      description:
-        "Aplicação de cadastro de tecnologias, remoção e edição de tecnologias estudadas.  Foi utilizado api externa.",
-      deploy: "https://kenzie-hub-navy.vercel.app/",
-      github: "https://github.com/caiogiffoni/kenzie-hub",
-    },
-    {
-      print: stoic,
-      title: "Stoic Quote Machine",
-      description:
-        "Aplicação simples de citações de filósofos estoicos com botão para compartilhar no twitter.",
-      deploy: "https://stoic-quote-machine-caio-giffoni.vercel.app/",
-      github: "https://github.com/caiogiffoni/random-quote-machine",
     },
     {
       print: hosteando,
@@ -83,12 +83,20 @@ export const Projects = () => {
       github: "https://github.com/caiogiffoni/crud-user-caiogiffoni",
     },
     {
-      print: anchor,
-      title: "Anchor",
+      print: hub,
+      title: "Kenzie Hub",
       description:
-        "API para hospedagem de eventos com várias regras de negócio e escopo diferenciado. Foi utilizado Django, Django RestFramework e Docker.",
-      deploy: "https://anchor-tcm-m5.herokuapp.com/schema/swagger-ui/",
-      github: "https://github.com/matheusprado1/anchor-tcm-m5",
+        "Aplicação de cadastro de tecnologias, remoção e edição de tecnologias estudadas.  Foi utilizado api externa.",
+      deploy: "https://kenzie-hub-navy.vercel.app/",
+      github: "https://github.com/caiogiffoni/kenzie-hub",
+    },
+    {
+      print: stoic,
+      title: "Stoic Quote Machine",
+      description:
+        "Aplicação simples de citações de filósofos estoicos com botão para compartilhar no twitter.",
+      deploy: "https://stoic-quote-machine-caio-giffoni.vercel.app/",
+      github: "https://github.com/caiogiffoni/random-quote-machine",
     },
     {
       print: bandkamp,
@@ -116,14 +124,6 @@ export const Projects = () => {
       deploy: "https://dollar-store-api.herokuapp.com/api/docs/",
       github:
         "https://github.com/Kenzie-Academy-Brasil-Developers/m5-sprint5-komercio-caiogiffoni",
-    },
-    {
-      print: clientarchive,
-      title: "Clients Archive - FullStack",
-      description:
-        "Aplicação FullStack de cadastro, visualização, atualização e remoção de clients e contatos com registro, login autenticação e permissões diversas.",
-      deploy: "https://clients-archive-react-js.vercel.app/",
-      github: "https://github.com/caiogiffoni/clients-archive",
     },
   ];
 
