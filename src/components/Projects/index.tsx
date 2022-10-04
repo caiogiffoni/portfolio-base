@@ -22,6 +22,7 @@ import bandkamp from "../../../src/assets/projects/bandkamp.png";
 import kmdb from "../../../src/assets/projects/kmdb.png";
 import dollarstore from "../../../src/assets/projects/dollarstore.png";
 import clientarchive from "../../../src/assets/projects/client-archive.png";
+import interestcalculator from "../../../src/assets/projects/interest-calculator.png";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
@@ -124,6 +125,14 @@ export const Projects = () => {
       deploy: "https://dollar-store-api.herokuapp.com/api/docs/",
       github:
         "https://github.com/Kenzie-Academy-Brasil-Developers/m5-sprint5-komercio-caiogiffoni",
+    },
+    {
+      print: interestcalculator,
+      title: "Interest Calculator",
+      description:
+        "Aplicação frontend para cálculo de antecipação de pagamento.",
+      deploy: "https://interest-calculator-ten.vercel.app/",
+      github: "https://github.com/caiogiffoni/interest-calculator",
     },
   ];
 
