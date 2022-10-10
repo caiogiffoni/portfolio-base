@@ -23,6 +23,7 @@ import kmdb from "../../../src/assets/projects/kmdb.png";
 import dollarstore from "../../../src/assets/projects/dollarstore.png";
 import clientarchive from "../../../src/assets/projects/client-archive.png";
 import interestcalculator from "../../../src/assets/projects/interest-calculator.png";
+import cnbareader from "../../../src/assets/projects/cnba-reader.png";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
@@ -133,6 +134,14 @@ export const Projects = () => {
         "Aplicação frontend para cálculo de antecipação de pagamento.",
       deploy: "https://interest-calculator-ten.vercel.app/",
       github: "https://github.com/caiogiffoni/interest-calculator",
+    },
+    {
+      print: cnbareader,
+      title: "CNBA Reader",
+      description:
+        "API para upload de arquivos no formato CNBA, parseamento dessas informações, persistência no banco de dados e visualização das tabelas dividias por estabelecimentos.",
+      deploy: "https://github.com/caiogiffoni/cnba-reader/blob/main/README.md/",
+      github: "https://github.com/caiogiffoni/cnba-reader",
     },
   ];
 
