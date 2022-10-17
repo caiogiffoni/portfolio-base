@@ -88,7 +88,7 @@ export const Introduction = () => {
             Caio Giffoni
           </Heading>
           <Text fontSize={["12px", "14px", "16px"]}>
-            Desenvolvedor FullSatck
+            Desenvolvedor FullStack
           </Text>
           <HStack spacing={5} color={colorWordsStyle}>
             <Box
