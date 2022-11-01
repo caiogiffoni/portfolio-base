@@ -103,7 +103,7 @@ export const AboutMe = () => {
                 target="_blank"
                 to={{
                   pathname:
-                    "https://www.dropbox.com/s/s70axll6i1dy65s/Curr%C3%ADculo_Caio%20Giffoni%20F%20G%2020220923%20pt.pdf?dl=0",
+                    "https://www.dropbox.com/s/eeteegcb4paok2w/Curr%C3%ADculo_Caio%20Giffoni%20F%20G%2020220923%20fs.pdf?dl=0",
                 }}
               >
                 Download CV
