@@ -12,6 +12,7 @@ import { SiMaterialui } from "react-icons/si";
 import { SiPostgresql } from "react-icons/si";
 import { SiDjango } from "react-icons/si";
 import { SiDocker } from "react-icons/si";
+import { SiGraphql } from "react-icons/si";
 
 export const stackData = [
   {
@@ -65,6 +66,10 @@ export const stackData = [
   {
     title: "Djagon",
     img: SiDjango,
+  },
+  {
+    title: "GraphQL",
+    img: SiGraphql,
   },
   {
     title: "Docker",

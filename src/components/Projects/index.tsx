@@ -24,6 +24,8 @@ import dollarstore from "../../../src/assets/projects/dollarstore.png";
 import clientarchive from "../../../src/assets/projects/client-archive.png";
 import interestcalculator from "../../../src/assets/projects/interest-calculator.png";
 import cnbareader from "../../../src/assets/projects/cnba-reader.png";
+import carregister from "../../../src/assets/projects/car-register.png";
+import bikerides from "../../../src/assets/projects/bike-rides.png";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
@@ -142,6 +144,22 @@ export const Projects = () => {
         "API para upload de arquivos no formato CNBA, parseamento dessas informações, persistência no banco de dados e visualização das tabelas dividias por estabelecimentos.",
       deploy: "https://github.com/caiogiffoni/cnba-reader/blob/main/README.md/",
       github: "https://github.com/caiogiffoni/cnba-reader",
+    },
+    {
+      print: carregister,
+      title: "Car Register",
+      description:
+        "Aplicação fullstack para registro de carros, incluindo CRUD completo.",
+      deploy: "https://car-register-caio-giffoni.vercel.app/",
+      github: "https://github.com/caiogiffoni/car-register",
+    },
+    {
+      print: bikerides,
+      title: "Bike Rides",
+      description:
+        "Uma API que irá possibilitar a criação de pedais pelos usuários, além disso outros usuários poderão visualizar esses pedais e se inscrever neles para que no dia marcado aqueles que se inscreveram possam pedalar em grupo.",
+      deploy: "https://github.com/caiogiffoni/ride-api",
+      github: "https://github.com/caiogiffoni/ride-api",
     },
   ];
 
