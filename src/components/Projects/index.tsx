@@ -30,6 +30,12 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import { useColors } from "../../provider/Colors";
+import {
+  Alert,
+  AlertIcon,
+  AlertTitle,
+  AlertDescription,
+} from "@chakra-ui/react";
 
 export const Projects = () => {
   const { colorMode } = useColorMode();
@@ -211,6 +217,22 @@ export const Projects = () => {
           order={["1", "1", "2"]}
         />
       </Flex>
+      <Box
+        w="100%"
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        mt="15px"
+      >
+        <Alert status="error" w="80%">
+          <AlertIcon />
+          <AlertTitle>Alguns links do Heroku estão desativados!</AlertTitle>
+          <AlertDescription>
+            Devido ao cancelamento do plano gratuito do Heroku, alguns links
+            estão desativados. Em breve serão implementadas outras soluções.
+          </AlertDescription>
+        </Alert>
+      </Box>
       <HStack justify="center" mt="40px" w="100%">
         <VStack spacing={5} w={["90%"]}>
           {PC.map((project, i) => (
