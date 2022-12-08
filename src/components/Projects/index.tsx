@@ -218,17 +218,25 @@ export const Projects = () => {
         />
       </Flex>
       <Box
-        w="100%"
+        as={motion.div}
+        ref={ref}
+        variants={boxVariant}
+        animate={control}
         display="flex"
         justifyContent="center"
         alignItems="center"
         mt="15px"
       >
-        <Alert status="error" w="80%">
+        <Alert
+          status="error"
+          w={["80%", "80%", "80%", "80%", "60%"]}
+          display="flex"
+          flexDirection={["column", "row"]}
+        >
           <AlertIcon />
-          <AlertTitle>Alguns links do Heroku estão desativados!</AlertTitle>
+          <AlertTitle>Os links do Heroku estão desativados!</AlertTitle>
           <AlertDescription>
-            Devido ao cancelamento do plano gratuito do Heroku, alguns links
+            Devido ao cancelamento do plano gratuito do Heroku, alguns deploys
             estão desativados. Em breve serão implementadas outras soluções.
           </AlertDescription>
         </Alert>
