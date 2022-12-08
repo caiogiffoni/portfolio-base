@@ -56,7 +56,7 @@ export const Projects = () => {
       print: HDR,
       title: "Hora do Rango",
       description:
-        "Aplicação para conectar clientes e cozinheiros. Foi um projeto feito em grupo desde a concepção até o término do MVP. Utilizado uma api simples para suportar requisições",
+        "Aplicação para conectar clientes e cozinheiros. Foi um projeto feito em grupo desde a concepção até o término do MVP. Utilizado uma api simples para suportar requisições. Aplicação em ReactJs",
       deploy: "https://capstone-m3-grupo-5.vercel.app/",
       github: "https://github.com/devadrianoabner/capstone-m3---grupo-5/",
     },
@@ -64,7 +64,7 @@ export const Projects = () => {
       print: clientarchive,
       title: "Clients Archive - FullStack",
       description:
-        "Aplicação FullStack de cadastro, visualização, atualização e remoção de clients e contatos com registro, login autenticação e permissões diversas.",
+        "Aplicação FullStack de cadastro, visualização, atualização e remoção de clients e contatos com registro, login autenticação e permissões diversas. Aplicação em React Js com Typescript no Front e NodeJS com Typescript no Back.",
       deploy: "https://clients-archive-react-js.vercel.app/",
       github: "https://github.com/caiogiffoni/clients-archive",
     },
@@ -72,7 +72,7 @@ export const Projects = () => {
       print: doIt,
       title: "do.it",
       description:
-        "Aplicação de lista de tarefas feita em react com styled components. Foi utilizado api externa.",
+        "Aplicação de lista de tarefas feita em ReactJs com styled components. Foi utilizado api externa.",
       deploy: "https://do-it-caiogiffoni-app.vercel.app/",
       github: "https://github.com/caiogiffoni/do-it-caiogiffoni-app",
     },
@@ -88,7 +88,7 @@ export const Projects = () => {
       print: crud,
       title: "CRUD - Usuários",
       description:
-        "API de uma aplicação simples de cadastro, listagem, alteração e remoção de usuários.",
+        "API de uma aplicação simples de cadastro, listagem, alteração e remoção de usuários. Foi utilizado NodeJs, Express e TypeORM.",
       deploy: "https://caiogiffoni.github.io/crud-user-caiogiffoni-doc/",
       github: "https://github.com/caiogiffoni/crud-user-caiogiffoni",
     },
@@ -96,7 +96,7 @@ export const Projects = () => {
       print: hub,
       title: "Kenzie Hub",
       description:
-        "Aplicação de cadastro de tecnologias, remoção e edição de tecnologias estudadas.  Foi utilizado api externa.",
+        "Aplicação frontend de cadastro de tecnologias, remoção e edição de tecnologias estudadas. Foi utilizado ReactJs. Foi utilizado api externa.",
       deploy: "https://kenzie-hub-navy.vercel.app/",
       github: "https://github.com/caiogiffoni/kenzie-hub",
     },
@@ -104,7 +104,7 @@ export const Projects = () => {
       print: stoic,
       title: "Stoic Quote Machine",
       description:
-        "Aplicação simples de citações de filósofos estoicos com botão para compartilhar no twitter.",
+        "Aplicação frontend simples de citações de filósofos estoicos com botão para compartilhar no twitter. Foi utilizado ReactJs.",
       deploy: "https://stoic-quote-machine-caio-giffoni.vercel.app/",
       github: "https://github.com/caiogiffoni/random-quote-machine",
     },
@@ -139,7 +139,7 @@ export const Projects = () => {
       print: interestcalculator,
       title: "Interest Calculator",
       description:
-        "Aplicação frontend para cálculo de antecipação de pagamento.",
+        "Aplicação frontend para cálculo de antecipação de pagamento. Foi utilizado ReactJS com Typescript",
       deploy: "https://interest-calculator-ten.vercel.app/",
       github: "https://github.com/caiogiffoni/interest-calculator",
     },
@@ -147,7 +147,7 @@ export const Projects = () => {
       print: cnbareader,
       title: "CNBA Reader",
       description:
-        "API para upload de arquivos no formato CNBA, parseamento dessas informações, persistência no banco de dados e visualização das tabelas dividias por estabelecimentos.",
+        "API para upload de arquivos no formato CNBA, parseamento dessas informações, persistência no banco de dados e visualização das tabelas dividias por estabelecimentos. Foi utilizado Django, Django RestFramework.",
       deploy: "https://github.com/caiogiffoni/cnba-reader/blob/main/README.md/",
       github: "https://github.com/caiogiffoni/cnba-reader",
     },
@@ -155,7 +155,7 @@ export const Projects = () => {
       print: carregister,
       title: "Car Register",
       description:
-        "Aplicação fullstack para registro de carros, incluindo CRUD completo.",
+        "Aplicação fullstack para registro de carros, incluindo CRUD completo. Foi utilizado React Js e Node Js",
       deploy: "https://car-register-caio-giffoni.vercel.app/",
       github: "https://github.com/caiogiffoni/car-register",
     },
@@ -163,7 +163,7 @@ export const Projects = () => {
       print: bikerides,
       title: "Bike Rides",
       description:
-        "Uma API que irá possibilitar a criação de pedais pelos usuários, além disso outros usuários poderão visualizar esses pedais e se inscrever neles para que no dia marcado aqueles que se inscreveram possam pedalar em grupo.",
+        "Uma API que irá possibilitar a criação de pedais pelos usuários, além disso outros usuários poderão visualizar esses pedais e se inscrever neles para que no dia marcado aqueles que se inscreveram possam pedalar em grupo. Foi utilizado NodeJS com GraphQL.",
       deploy: "https://github.com/caiogiffoni/ride-api",
       github: "https://github.com/caiogiffoni/ride-api",
     },
