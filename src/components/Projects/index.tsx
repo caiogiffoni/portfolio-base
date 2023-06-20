@@ -26,6 +26,8 @@ import interestcalculator from "../../../src/assets/projects/interest-calculator
 import cnbareader from "../../../src/assets/projects/cnba-reader.png";
 import carregister from "../../../src/assets/projects/car-register.png";
 import bikerides from "../../../src/assets/projects/bike-rides.png";
+import youtube from "../../../src/assets/projects/youtube.png";
+import riopredict from "../../../src/assets/projects/rio-predict.png";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
@@ -59,6 +61,22 @@ export const Projects = () => {
         "Aplicação para conectar clientes e cozinheiros. Foi um projeto feito em grupo desde a concepção até o término do MVP. Utilizado uma api simples para suportar requisições. Aplicação em ReactJs",
       deploy: "https://capstone-m3-grupo-5.vercel.app/",
       github: "https://github.com/devadrianoabner/capstone-m3---grupo-5/",
+    },
+    {
+      print: youtube,
+      title: "Youtube - Predict",
+      description:
+        "Aplicação para resumo de vídeos no youtube utilizando ChatGPT da OpenAI por trás",
+      deploy: "https://summary-youtube.onrender.com/",
+      github: "https://github.com/caiogiffoni/summary-youtube",
+    },
+    {
+      print: riopredict,
+      title: "Rio Predict - Analysis",
+      description:
+        "Análise e criação de modelo apra previsão de preço para apartamentos do AirBnB no Rio de Janeiro.",
+      deploy: "https://github.com/caiogiffoni/rio-predict-py",
+      github: "https://github.com/caiogiffoni/rio-predict-py",
     },
     {
       print: clientarchive,
