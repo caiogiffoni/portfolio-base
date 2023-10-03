@@ -13,6 +13,9 @@ import { SiPostgresql } from "react-icons/si";
 import { SiDjango } from "react-icons/si";
 import { SiDocker } from "react-icons/si";
 import { SiGraphql } from "react-icons/si";
+import { SiFlask } from "react-icons/si";
+import { SiAmazonaws } from "react-icons/si";
+import { SiTerraform } from "react-icons/si";
 
 export const stackData = [
   {
@@ -30,6 +33,10 @@ export const stackData = [
   {
     title: "TypeScript",
     img: SiTypescript,
+  },
+  {
+    title: "AWS",
+    img: SiAmazonaws,
   },
   {
     title: "React",
@@ -68,11 +75,19 @@ export const stackData = [
     img: SiDjango,
   },
   {
+    title: "Flask",
+    img: SiFlask,
+  },
+  {
     title: "GraphQL",
     img: SiGraphql,
   },
   {
     title: "Docker",
     img: SiDocker,
+  },
+  {
+    title: "Terraform",
+    img: SiTerraform,
   },
 ];
