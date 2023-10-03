@@ -33,3 +33,4 @@ Para essa aplicação, não foi utilizado figma
 - [x] Mudar layout Card Tecnologias
 - [ ] Adicionar experiencia
 - [ ] Toggle inglês
+- [ ] Particles Background
