@@ -59,27 +59,32 @@ export const ProjectCard = ({
       animate={control}
       color={colorWordsDesc}
       bgColor={bgColor2}
-      p={["20px 20px", "20px 30px", "20px 60px"]}
+      p={["10px 10px", "10px 15px", "25px 30px"]}
       borderRadius="20px"
-      w="100%"
+      w={["100%", "80%", "50%", "45%", "22%"]}
       maxW="1120px"
+      h="480px"
     >
       <Flex
         gap={8}
         justify="flex-start"
         align={["flex-start", "flex-start", "center"]}
-        direction={["column", "column", "column", "row"]}
+        direction={["column"]}
+        h="100%"
       >
         <Image
           src={print}
           alt="HDR"
-          w={["310px", "310px", "310px", "310px", "410px"]}
+          // w={["310px", "310px", "310px", "310px", "410px"]}
+          boxSize="300px"
         />
-        <VStack align="flex-start" maxW="600px">
-          <Heading fontSize={["25px", "30px"]}>{title}</Heading>
-          <Text flexGrow="2" fontSize={["16px", "16px"]}>
-            {description}
-          </Text>
+        <VStack align="flex-start" maxW="600px" h="100%">
+          <Heading fontSize={["15px", "20px"]}>{title}</Heading>
+          <Box flexGrow="2">
+            <Text fontSize={["12px", "14px"]} align="justify">
+              {description}
+            </Text>
+          </Box>
           <HStack spacing={8}>
             <Link
               target="_blank"

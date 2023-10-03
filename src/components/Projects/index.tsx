@@ -260,7 +260,7 @@ export const Projects = () => {
         </Alert>
       </Box>
       <HStack justify="center" mt="40px" w="100%">
-        <VStack spacing={5} w={["90%"]}>
+        {/* <VStack spacing={5} w={["90%"]}>
           {PC.map((project, i) => (
             <ProjectCard
               print={project.print}
@@ -271,7 +271,25 @@ export const Projects = () => {
               key={i}
             />
           ))}
-        </VStack>
+        </VStack> */}
+        <HStack
+          spacing={5}
+          w={["100%"]}
+          flexWrap="wrap"
+          justify="center"
+          gap={5}
+        >
+          {PC.map((project, i) => (
+            <ProjectCard
+              print={project.print}
+              title={project.title}
+              description={project.description}
+              deploy={project.deploy}
+              github={project.github}
+              key={i}
+            />
+          ))}
+        </HStack>
       </HStack>
     </Box>
   );
